@@ -1,0 +1,74 @@
+html, body {
+    height: 100%;  /* Ensure full height of the body and html */
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    min-height: 100vh;  /* The container for the entire app takes up the full viewport height */
+    display: flex;
+    flex-direction: column;  /* Flex container that allows items to stack */
+}
+
+.content {
+    flex-grow: 1;  /* Makes the main content area grow and take up available space */
+}
+
+.home-footer {
+    background-color: #D3D3D3;
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;  /* Ensure the footer stays at the bottom */
+    position: relative;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* This ensures the two columns (About and Quick Links) are separated */
+    align-items: flex-start;
+    text-align: left;
+    max-width: 1000px;  /* Max width to center the content */
+    margin: 0 auto;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content .about {
+    width: 50%;  /* Take up the left half */
+}
+
+.footer-content .quick-links {
+    width: 30%;  /* Take up less space on the right */
+    text-align: right;  /* Align text to the right side */
+}
+
+.footer-content h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    font-size: 1em;
+    color: #555;
+}
+
+.footer-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin-bottom: 8px;
+}
+
+.footer-content ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline;
+}

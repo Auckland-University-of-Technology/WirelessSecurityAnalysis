@@ -1,0 +1,190 @@
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Change from center to flex-start to prevent blocking the top */
+    min-height: 100vh; /* Make sure it takes full screen height */
+    font-family: 'Open Sans', Arial, sans-serif;
+    padding: 10px;
+    margin-top: 20px; /* Add margin to prevent overlap */
+}
+
+/* Card style for WiFi setup */
+.wifi-setup {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px 50px;
+    width: 100%;
+    max-width: 400px; /* Set max width for larger screens */
+    text-align: center;
+    margin-top: 50px; /* Add margin to move it down from the top */
+}
+
+/* Title styling with a box around the h2 */
+.wifi-setup h2 {
+    margin-bottom: 30px;
+    font-size: 22px;
+    color: #007bff;
+    font-weight: 600;
+    border: 2px solid #ddd; /* Light border around the box */
+    border-radius: 12px; /* Rounded corners */
+    padding: 15px; /* Padding inside the box */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for 3D effect */
+    text-align: center; /* Ensure the text is centered */
+}
+
+
+/* Input and select styling */
+.wifi-setup select,
+.wifi-setup input[type="text"] {
+    margin: 15px 0;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Label styling */
+.wifi-setup label {
+    display: block;
+    margin: 10px 0 5px; /* Adjust the top margin to reduce the gap */
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+}
+
+/* Radio button group styling */
+.wifi-setup .radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0; /* Reduce the margin to make the gap smaller */
+    padding: 0 10px;
+}
+
+
+/* Radio buttons styling */
+.wifi-setup .radio-group label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.wifi-setup .radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Submit button styling */
+.wifi-setup button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 30px; /* Add margin to create space above the button */
+}
+
+/* Hover effect for submit button */
+.wifi-setup button:hover {
+    background-color: #444;
+}
+
+/* Recommendation box styling */
+.recommendation {
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+    font-size: 14px;
+}
+
+/* General recommendation button */
+.recommendation .general-recommendation-button {
+    background-color: #D3D3D3 !important;
+    color: black !important;
+    padding: 12px 25px !important; /* Increase padding slightly */
+    border: 1px solid black !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    font-size: 1.05em !important; /* Slightly increase the font size */
+    font-weight: bold !important;
+    margin-top: 15px !important; /* More space above the button */
+    transition: background-color 0.3s ease !important;
+}
+
+.recommendation h3 {
+    font-size: 20px; /* Slightly increase the font size for the alert message */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Container to position the tooltip */
+.tooltip-container {
+    position: relative; /* Container for relative positioning */
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 50%; /* Positioning the tooltip vertically */
+    left: 105%; /* Positioning the tooltip to the right */
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 14px; /* Adjust the font size for better readability */
+    font-weight: bold; /* Make the text bold */
+    white-space: nowrap; /* Prevent text from wrapping */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Mobile responsive adjustments */
+@media (max-width: 600px) {
+    .wifi-setup {
+        width: 100%;
+        padding: 20px 15px;
+        transform: scale(0.9); /* Scale down for smaller screens */
+    }
+
+    .wifi-setup h2 {
+        font-size: 18px;
+    }
+
+    .wifi-setup .radio-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wifi-setup .radio-group label {
+        margin: 5px 0;
+    }
+
+    .wifi-setup button {
+        font-size: 14px;
+    }
+
+    /* Further scaling down for very small screens */
+    @media (max-width: 400px) {
+        .wifi-setup {
+            transform: scale(0.9); /* Scale down even more for very small screens */
+        }
+    }
+}
